@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullCalendar trial</title>
+
+    <!-- FullCalendar css cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.css">
+
+    <!-- Boostrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+
+
+<body>
+
+    <div class="row" style="margin-top:100px; width: 70%;margin-left:auto;margin-right: auto;">
+        <div class="col">
+            <h4>Click and Drag between two slots of time on a date/day to create an event</h4>
+        </div>
+    </div>
+
+    <div id="calendar">
+        <!-- Place where the calendar will be mounted -->
+    </div>
+
+
+    <!-- Event Creation Modal -->
+    <div class="modal animated fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create an Event</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="eventForm">
+                        <div class="form-row my-4">
+                            <div class="form-group">
+                                <input class="form-control" type="text" id="eventName" name="eventName" placeholder="Name of the Event">
+                            </div>
+                        </div>
+                        <div class="form-row my-4">
+                            <div class="form-group">
+                                <input class="form-control" type="text" id="eventUrl" name="eventUrl" placeholder="Event URL">
+                            </div>
+                        </div>
+                        <input type="text" style="display: none;" id="startDateInput">
+                        <input type="text" style="display: none;" id="endDateInput">
+
+                        <div class="row my-4">
+                            <div class="col">
+                                <h5>Start Date Selected</h5>
+                                <br>
+                                <p id="startDate"></p>
+                            </div>
+                            <div class="col">
+                                <h5>End Date Selected</h5>
+                                <br>
+                                <p id="endDate"></p>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col">
+                                <button id="createEventBtn" class="btn btn-success">
+                                    Create
+                                 </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="spinner" style="display: none;" class="d-flex justify-content-center">
+                        <div id="spinner_elem" style="display: none;" class="spinner-border" style="width: 6rem; height: 6rem;" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div id="success_container" style="display: none;" class="alert alert-success my-4"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div id="failure_container" style="display: none;" class="alert alert-danger my-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- FullCalendar.JS cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+    <!-- JQuery CDN - from google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
