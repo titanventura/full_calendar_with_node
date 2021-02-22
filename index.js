@@ -85,4 +85,4 @@ app.post('/events', (req, res) => {
 })
 
 
-app.listen(5000, () => { console.log("Server started") })
+app.listen(process.env.PORT || 5000, () => { console.log("Server started") })
