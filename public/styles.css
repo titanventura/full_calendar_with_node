@@ -1,5 +1,23 @@
+/* #calendar {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (min-width:480px) {
+    #calendar {
+        margin: 100px auto;
+        width: 70vw;
+        height: 100vh;
+    }
+} */
+
+
+/* 
+.fc-today-button {
+    margin-right: 0 !important;
+    margin-left: auto  !important;
+} */
+
 #calendar {
-    margin: 100px auto;
-    width: 70vw;
-    height: 100vh;
+    min-height: 650px;
 }

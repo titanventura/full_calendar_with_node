@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+        height: '650px',
         initialView: 'timeGrid',
         selectable: true,
         nowIndicator: true,
